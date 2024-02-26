@@ -2,7 +2,7 @@
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
-$database_name = "ukk_fadli";
+$database_name = "noval";
 $connection = mysqli_connect($host, $username, $password, $database_name);
 
 /* SIGN UP Member */
@@ -209,7 +209,8 @@ function tambahadmin()
 }
 
 // MENAMPILKAN SESUATU SESUAI DENGAN INPUTAN USER PADA * SEARCH ENGINE *
-function search($keyword) {
+function search($keyword)
+{
   // search data buku
   $querySearch = "SELECT * FROM buku 
   WHERE
@@ -218,7 +219,6 @@ function search($keyword) {
   ";
   return queryReadData($querySearch);
 }
-
 function searchMember ($keyword) {
      // search member terdaftar || admin
    $searchMember = "SELECT * FROM member WHERE 
