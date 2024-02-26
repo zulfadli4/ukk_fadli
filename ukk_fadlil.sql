@@ -1,9 +1,9 @@
-/-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Feb 2024 pada 13.52
+-- Waktu pembuatan: 26 Feb 2024 pada 08.42
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nopal`
+-- Database: `ukk_fadli`
 --
 
 -- --------------------------------------------------------
@@ -97,7 +97,7 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`nisn`, `nama`, `password`, `kelas`, `jurusan`, `alamat`) VALUES
-(212210141, 'noval', '123', 'XII', 'Rekayasa Perangkat Lunak', 'Bogor');
+(1111, 'fadli', '123', 'XII', 'Rekayasa Perangkat Lunak', 'Bogor');
 
 -- --------------------------------------------------------
 
@@ -115,6 +115,13 @@ CREATE TABLE `peminjaman` (
   `harga` varchar(50) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `peminjaman`
+--
+
+INSERT INTO `peminjaman` (`id`, `id_buku`, `nisn`, `id_user`, `tgl_pinjam`, `tgl_kembali`, `harga`, `status`) VALUES
+(1, 'KB0010', 1111, 12, '2024-02-26', '2024-03-02', 'Rp. 5.000 (Lunas)', 1);
 
 -- --------------------------------------------------------
 
@@ -136,8 +143,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama`, `sebagai`, `no_tlp`) VALUES
-(36, 'novalabiyu', '123', 'abiyuuuu', 'petugas', '0895337027010'),
-(41, 'admin', '123', 'novalabiyu', 'admin', '089573823182');
+(12, 'fadli', '123', 'zull', 'petugas', '083811427442'),
+(13, 'admin', '123', 'fadli', 'admin', '083811427442');
 
 --
 -- Indexes for dumped tables
@@ -191,7 +198,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
